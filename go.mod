@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/gogo/protobuf v1.3.2
+	github.com/kubernetes-sigs/noderesourcetopology-api v0.0.0-00010101000000-000000000000
 	k8s.io/apimachinery v0.28.2
 	k8s.io/code-generator v0.28.2
 )
@@ -41,3 +42,5 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
+
+replace github.com/kubernetes-sigs/noderesourcetopology-api => ../noderesourcetopology-api
