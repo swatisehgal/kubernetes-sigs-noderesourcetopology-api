@@ -27,8 +27,8 @@ CODEGEN_PKG=${CODEGEN_PKG:-$(cd "${SCRIPT_ROOT}"; ls -d -1 ./vendor/k8s.io/code-
 #                  the generators to output into the vendor dir instead of the $GOPATH directly.
 #                  For normal projects this can be dropped.
 #
-bash "${CODEGEN_PKG}"/generate-groups.sh "deepcopy,client,informer,lister" \
-  kubernetes-sigs/noderesourcetopology-api/pkg/generated kubernetes-sigs/noderesourcetopology-api/pkg/apis \
+bash "${CODEGEN_PKG}"/kube_codegen.sh "deepcopy,client,informer,lister" \
+  github.com/kubernetes-sigs/noderesourcetopology-api/pkg/generated github.com/kubernetes-sigs/noderesourcetopology-api/pkg/apis \
   topology:v1alpha1 \
   --output-base "$(dirname "${BASH_SOURCE[0]}")/../../.." \
   --go-header-file "${SCRIPT_ROOT}"/hack/boilerplate.go.txt
