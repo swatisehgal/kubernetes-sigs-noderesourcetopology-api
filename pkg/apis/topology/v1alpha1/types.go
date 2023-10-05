@@ -1,4 +1,4 @@
-package v1alpha2
+package v1alpha1
 
 import (
 	_ "github.com/gogo/protobuf/gogoproto"

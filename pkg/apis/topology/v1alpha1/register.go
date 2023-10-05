@@ -1,11 +1,11 @@
-package v1alpha2
+package v1alpha1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	topology "pkg/apis/topology"
+	topology "github.com/kubernetes-sigs/noderesourcetopology-api/pkg/apis/topology"
 )
 
 // SchemeGroupVersion is group version used to register these objects
